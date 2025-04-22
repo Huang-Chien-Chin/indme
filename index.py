@@ -1,18 +1,14 @@
-from flask import Flask, render_template, request, redirect, url_for
-from datetime import datetime, timezone, timedelta
-
+from flask import Flask, render_template
 app = Flask(__name__)
+
+
 
 
 @app.route("/")
 def index():
-    return redirect(url_for('rwd'))
-
-
-@app.route("/rwd")
-def rwd():
-    return render_template("rwd.html")
+    return render_template("index.html")
+    
 
 
 if __name__ == "__main__":
-    app.run(debug=True) 
+    app.run()
